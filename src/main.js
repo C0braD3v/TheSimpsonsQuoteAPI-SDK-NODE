@@ -1,7 +1,6 @@
-module.exports = () => {
-    const request = require('request');
+const request = require('request');
 
-    function getQuotes (count) {
+function getQuotes (count) {
     
     request('https://thesimpsonsquoteapi.glitch.me/quotes?count=' + count, function (err, res, body) {
         if (!err && res.statusCode == 200) {
@@ -12,4 +11,5 @@ module.exports = () => {
             console.err(err)
         }
     })
-}}
+}
+module.exports = getQuotes;
