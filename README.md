@@ -1,12 +1,12 @@
-# TheSimpsonsQuoteAPI-SDK-GO
+# TheSimpsonsQuoteAPI-SDK-NODE
 A NodeJs SDK for the SimpsonsQuote API by JLuboff. (https://github.com/JLuboff/TheSimpsonsQuoteAPI)
 
 # Usage
 
-`npm install the-simpsons-quote-api`
+`npm install simpsons-quote-api`
 
 ```js
-const simpsons = require('the-simpsons-quote-api')
+const simpsons = require('simpsons-quote-api')
 async function logData() {
 let data = await simpsons.getQuotes("0").catch((e) => {console.error(e)})
 console.log(data)
