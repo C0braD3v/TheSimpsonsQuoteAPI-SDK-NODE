@@ -7,8 +7,13 @@ A NodeJs SDK for the SimpsonsQuote API by JLuboff. (https://github.com/JLuboff/T
 
 ```js
 const simpsons = require('the-simpsons-quote-api')
-let data = simpsons.getQuotes("0")
+async function logData() {
+let data = await simpsons.getQuotes("0").catch((e) => {console.error(e)})
 console.log(data)
+}
+logData()
+
+
 ```
 
 Data methods:
