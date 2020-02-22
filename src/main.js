@@ -1,15 +1,10 @@
-const request = require('request');
+const got = require('got');
 
-function getQuotes (count) {
-    
-    request('https://thesimpsonsquoteapi.glitch.me/quotes?count=' + count, function (err, res, body) {
-        if (!err && res.statusCode == 200) {
-          var info = JSON.parse(body)
-          return info
+exports.getQuotes = async (count) => {
+        try {
+            const response = await got('https://thesimpsonsquoteapi.glitch.me/quotes?count=' + count);
+            return JSON.parse(response.body);
+        } catch (error) {
+            return console.error(error.response.body);
         }
-        else {
-            console.err(err)
-        }
-    })
 }
-module.exports = getQuotes;
