@@ -7,20 +7,24 @@ A NodeJs SDK for [The SimpsonsQuote API by JLuboff](https://github.com/JLuboff/T
 
 ```js
 const simpsons = require('simpsons-quote-api')
-async function logData() {
-let data = await simpsons.getQuotes("0").catch((e) => {console.error(e)})
-console.log(data)
-}
-logData()
 
+simpsons.getQuotes("0")
+    .then((q) => {
+        console.log(q)
+    }).catch((e) => {
+        console.error(e)
+    })
 
 ```
 
 Data methods:
 
 ```
-.quote // The random quote that was fetched
-.image // The image of the character who said the quote
-.character // The character who said the quote
-.characterDirection // The direction the character was facing
+.getQuotes("#") // Returns promise<array, fullQuoteObject>
+
+fullQuoteObject Methods:
+.quote // Returns string<quote>
+.image // Returns string<image link of who said quote>
+.character // Returns string<charicter who said quote>
+.characterDirection // Returns string<direction charictar is facing in image>
 ```
