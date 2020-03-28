@@ -1,6 +1,8 @@
 const simpsons = require('simpsons-quote-api')
-async function logData() {
-let data = await simpsons.getQuotes("0").catch((e) => {console.error(e)})
-console.log(data[0].quote)
-}
-logData()
+
+simpsons.getQuotes("0")
+    .then((q) => {
+        console.log(q[0].quote)
+    }).catch((e) => {
+        console.error(e)
+    })
