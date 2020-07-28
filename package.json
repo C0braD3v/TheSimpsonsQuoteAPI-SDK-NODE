@@ -1,19 +1,21 @@
 {
-  "name": "simpsons-quote-api",
-  "version": "0.0.02",
-  "description": "A NodeJs SDK for The SimpsonsQuote API by JLuboff. (https://github.com/JLuboff/TheSimpsonsQuoteAPI)",
+  "name": "@hpaulson/simpsons-quotes",
+  "version": "0.0.2",
+  "description": "A NodeJs API wrapper for [The SimpsonsQuote API](https://github.com/JLuboff/TheSimpsonsQuoteAPI)",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "url": "https://github.com/HPaulson/Simpsons-Quotes",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/C0braD3v/TheSimpsonsQuoteAPI-SDK-NODE.git"
+    "url": "git+https://github.com/HPaulson/Simpsons-Quotes.git"
   },
-  "author": "C0braD3v",
+  "author": "HPaulson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/C0braD3v/TheSimpsonsQuoteAPI-SDK-NODE/issues"
+    "url": "https://github.com/HPaulson/Simpsons-Quotes/issues"
   },
-  "homepage": "https://github.com/C0braD3v/TheSimpsonsQuoteAPI-SDK-NODE#readme"
+  "homepage": "https://github.com/HPaulson/Simpsons-Quotes#readme",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" } 
 }

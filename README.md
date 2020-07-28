@@ -1,9 +1,9 @@
-# TheSimpsonsQuoteAPI-SDK-NODE
-A NodeJs SDK for [The SimpsonsQuote API by JLuboff](https://github.com/JLuboff/TheSimpsonsQuoteAPI).
+# Simpsons-Quotes
+A NodeJs SDK for [The SimpsonsQuote API](https://github.com/JLuboff/TheSimpsonsQuoteAPI).
 
 # Usage
 
-`npm install simpsons-quote-api`
+`npm install @hpaulson/simpsons-quotes`
 
 ```js
 const simpsons = require('simpsons-quote-api')
@@ -17,14 +17,16 @@ simpsons.getQuotes("0")
 
 ```
 
-Data methods:
+Methods:
 
-```
-.getQuotes("#") // Returns promise<array, fullQuoteObject>
+```js
+require('simpsons-quote-api')
+    .getQuotes("#") // Promise<Array, QuoteObject>
 
-fullQuoteObject Methods:
-.quote // Returns string<quote>
-.image // Returns string<image link of who said quote>
-.character // Returns string<charicter who said quote>
-.characterDirection // Returns string<direction charictar is facing in image>
+QuoteObject = {
+    quote // String<Quote>
+    image // String<ImageLink>
+    character // String<Character>
+    characterDirection // String<left | right>
+}
 ```
