@@ -1,4 +1,4 @@
-const simpsons = require('simpsons-quote-api')
+const simpsons = require('@hpaulson/simpsons-quotes')
 
 simpsons.getQuotes("0")
     .then((q) => {

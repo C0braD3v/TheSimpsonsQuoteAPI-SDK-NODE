@@ -3,10 +3,10 @@ A NodeJs SDK for [The SimpsonsQuote API](https://github.com/JLuboff/TheSimpsonsQ
 
 # Usage
 
-`npm install @hpaulson/simpsons-quotes`
+`npm install @hpaulson/simpsons-quotes  --registry=https://npm.pkg.github.com/hpaulson`
 
 ```js
-const simpsons = require('simpsons-quote-api')
+const simpsons = require('@hpaulson/simpsons-quotes')
 
 simpsons.getQuotes("0")
     .then((q) => {
@@ -20,7 +20,7 @@ simpsons.getQuotes("0")
 Methods:
 
 ```js
-require('simpsons-quote-api')
+require('@hpaulson/simpsons-quotes')
     .getQuotes("#") // Promise<Array, QuoteObject>
 
 QuoteObject = {
