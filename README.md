@@ -1,5 +1,5 @@
 # Simpsons-Quotes
-A NodeJs SDK for [The SimpsonsQuote API](https://github.com/JLuboff/TheSimpsonsQuoteAPI).
+An API Wrapper for [The SimpsonsQuote API](https://github.com/JLuboff/TheSimpsonsQuoteAPI).
 
 # Usage
 
